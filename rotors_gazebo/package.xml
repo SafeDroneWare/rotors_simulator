@@ -36,4 +36,11 @@
   <run_depend>roscpp</run_depend>
   <run_depend>sensor_msgs</run_depend>
 
+  <!-- Export model paths -->
+  <!-- See http://gazebosim.org/tutorials/?tut=ros_roslaunch#Exportingmodelpathsfromapackage.xml -->
+  <export>
+    <gazebo_ros gazebo_model_path="${prefix}/models"/>
+    <gazebo_ros gazebo_media_path="${prefix}/models"/>
+  </export>
+
 </package>
