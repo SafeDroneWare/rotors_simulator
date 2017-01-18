@@ -231,12 +231,13 @@
 
         <!-- Stereo controller, setting the transforms between the two cameras. -->
         <plugin name="${namespace}_stereo_camera_controller" filename="libgazebo_ros_multicamera.so">
+          <robotNamespace>${namespace}</robotNamespace>
           <alwaysOn>true</alwaysOn>
           <updateRate>0.0</updateRate>
           <cameraName>${camera_name}</cameraName>
           <imageTopicName>image_raw</imageTopicName>
           <cameraInfoTopicName>camera_info</cameraInfoTopicName>
-          <frameName>${camera_name}/camera_left_link</frameName>
+          <frameName>${camera_name}/camera_left_optical_link</frameName>
           <hackBaseline>${baseline_y}</hackBaseline>
           <distortionK1>0.0</distortionK1>
           <distortionK2>0.0</distortionK2>
